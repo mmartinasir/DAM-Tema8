@@ -7,7 +7,10 @@ import javax.swing.JLabel;
 
 public class Ventana {
 
-	private JFrame frame;
+	protected static JFrame frame;
+	protected static JLabel lblEtiquetaa;
+	protected static JLabel lblEtiquetab;
+	protected static JLabel lblPulsaUnaVocal;
 
 	/**
 	 * Launch the application.
@@ -41,8 +44,23 @@ public class Ventana {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblEtiquetaa = new JLabel("Etiqueta 1a");
-		lblEtiquetaa.setBounds(101, 31, 70, 14);
+		lblEtiquetaa = new JLabel("Etiqueta 2a");
+		lblEtiquetaa.setBounds(101, 31, 79, 14);
 		frame.getContentPane().add(lblEtiquetaa);
+		
+		lblEtiquetab = new JLabel("Etiqueta 2b");
+		lblEtiquetab.setBounds(101, 56, 73, 14);
+		frame.getContentPane().add(lblEtiquetab);
+		
+		lblPulsaUnaVocal = new JLabel("Pulsa una vocal");
+		lblPulsaUnaVocal.setBounds(101, 78, 90, 14);
+		frame.getContentPane().add(lblPulsaUnaVocal);
+		frame.setFocusable(true);
+		
+		//Añado los listener de los ejercicios
+		frame.addKeyListener(new Apartado2a());
+		frame.addKeyListener(new Apartado2b());
+		frame.addKeyListener(new Apartado2c());
+		frame.addKeyListener(new Apartado2d());
 	}
 }

@@ -3,7 +3,7 @@ package ejercicio2;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Apartado2a implements KeyListener {
+public class Apartado2d implements KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
@@ -13,7 +13,9 @@ public class Apartado2a implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		Ventana.lblEtiquetaa.setText(""+e.getKeyChar());
+		if (e.getKeyChar() == '+') {
+			Ventana.frame.setSize(Ventana.frame.getSize().width+5, Ventana.frame.getSize().height+5);
+		}
 
 	}
 
